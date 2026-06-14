@@ -16,6 +16,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
             min-height: 100vh;
+            line-height: 1.6;
         }
 
         .container {
@@ -36,6 +37,7 @@
             color: #2c3e50;
             font-size: 2.5em;
             margin-bottom: 10px;
+            line-height: 1.3;
         }
 
         .header .warning-sign {
@@ -56,9 +58,6 @@
             padding: 25px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
         }
 
         .safety-card:hover {
@@ -70,6 +69,7 @@
             font-size: 3em;
             margin-bottom: 15px;
             text-align: center;
+            line-height: 1;
         }
 
         .card-title {
@@ -78,6 +78,7 @@
             margin-bottom: 15px;
             text-align: center;
             font-weight: bold;
+            line-height: 1.3;
         }
 
         .rule-item {
@@ -87,13 +88,14 @@
             padding: 10px;
             background: #f8f9fa;
             border-radius: 8px;
+            line-height: 1.5;
         }
 
         .rule-number {
             background: #e74c3c;
             color: white;
-            width: 25px;
-            height: 25px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -102,12 +104,14 @@
             flex-shrink: 0;
             font-weight: bold;
             font-size: 0.9em;
+            line-height: 1;
         }
 
         .rule-text {
             color: #34495e;
-            font-size: 0.95em;
-            line-height: 1.4;
+            font-size: 1em;
+            line-height: 1.6;
+            flex: 1;
         }
 
         .important-box {
@@ -118,6 +122,7 @@
             margin-top: 15px;
             text-align: center;
             font-weight: bold;
+            line-height: 1.5;
         }
 
         .demo-button {
@@ -128,9 +133,10 @@
             font-size: 1.1em;
             border-radius: 30px;
             cursor: pointer;
-            margin: 10px;
+            margin: 15px 0;
             display: block;
             width: 100%;
+            line-height: 1.4;
         }
 
         .demo-button:hover {
@@ -157,6 +163,7 @@
             max-width: 600px;
             text-align: center;
             margin: 20px;
+            line-height: 1.6;
         }
 
         .close-modal {
@@ -167,6 +174,7 @@
             border-radius: 20px;
             margin-top: 20px;
             cursor: pointer;
+            font-size: 1em;
         }
 
         .quiz-section {
@@ -180,6 +188,7 @@
             font-size: 1.2em;
             margin-bottom: 15px;
             color: #2c3e50;
+            line-height: 1.4;
         }
 
         .quiz-options {
@@ -196,6 +205,7 @@
             cursor: pointer;
             border: none;
             font-size: 1em;
+            line-height: 1.4;
         }
 
         .quiz-option:hover {
@@ -223,9 +233,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="warning-sign">⚠️🧪🔬</div>
+            <div class="warning-sign">⚠️🔬</div>
             <h1>ПРАВИЛА БЕЗОПАСНОСТИ<br>в химической лаборатории</h1>
-            <p style="color: #7f8c8d; font-size: 1.1em;">Памятка для юных химиков</p>
+            <p style="color: #7f8c8d; font-size: 1.1em; line-height: 1.5;">Памятка для юных химиков</p>
         </div>
 
         <div class="card-grid">
@@ -253,6 +263,11 @@
                     <div class="rule-text">С огнём будь <strong>осторожен</strong>! 🔥</div>
                 </div>
 
+                <div class="rule-item">
+                    <div class="rule-number">5</div>
+                    <div class="rule-text">Не бери вещества <strong>руками</strong></div>
+                </div>
+
                 <div class="important-box">
                     🚨 После работы убери место и вымой руки!
                 </div>
@@ -277,7 +292,7 @@
                 </div>
 
                 <button class="demo-button" onclick="showModal()">
-                    🎬 Подробнее
+                    🎬 Подробнее о разбавлении
                 </button>
             </div>
 
@@ -299,7 +314,7 @@
         </div>
 
         <div class="quiz-section">
-            <h2 style="text-align: center; margin-bottom: 20px;">🎯 Проверь себя!</h2>
+            <h2 style="text-align: center; margin-bottom: 20px; line-height: 1.3;">🎯 Проверь себя!</h2>
             
             <div class="quiz-question">Как правильно разбавлять кислоту?</div>
             <div class="quiz-options">
@@ -312,7 +327,7 @@
     <div id="modal" class="modal" onclick="closeModal(event)">
         <div class="modal-content">
             <h2>🧪 Правильное разбавление</h2>
-            <p style="font-size: 1.2em; margin: 20px 0;">
+            <p style="font-size: 1.2em; margin: 20px 0; line-height: 1.8;">
                 <strong>ВОДУ</strong> налить в сосуд<br>
                 ↓<br>
                 <strong>МЕДЛЕННО</strong> добавлять КИСЛОТУ<br>
