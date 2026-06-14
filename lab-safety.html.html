@@ -3,695 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔬 Правила безопасности в химической лаборатории</title>
+    <title>🔬 Правила безопасности - Инфографика</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
+            padding: 40px;
         }
-
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
             background: white;
-            padding: 30px;
             border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            animation: bounce 2s infinite;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .header h1 {
+        h1 {
+            text-align: center;
             color: #2c3e50;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
-
-        .header .warning-sign {
-            font-size: 4em;
-            margin-bottom: 10px;
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.2em;
             margin-bottom: 30px;
         }
-
-        .safety-card {
-            background: white;
+        .section {
+            background: #f8f9fa;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
         }
-
-        .safety-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-        }
-
-        .safety-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .card-general::before {
-            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .card-acid::before {
-            background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
-        }
-
-        .card-emergency::before {
-            background: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
-        }
-
-        .card-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .card-title {
-            font-size: 1.5em;
+        .section h2 {
             color: #2c3e50;
             margin-bottom: 15px;
-            text-align: center;
-            font-weight: bold;
+            font-size: 1.5em;
         }
-
-        .rule-item {
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .rule {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
             display: flex;
             align-items: flex-start;
-            margin-bottom: 12px;
-            padding: 10px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: all 0.3s ease;
         }
-
-        .rule-item:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
-        }
-
         .rule-number {
             background: #e74c3c;
             color: white;
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 10px;
+            font-weight: bold;
             flex-shrink: 0;
-            font-weight: bold;
-            font-size: 0.9em;
         }
-
-        .rule-text {
-            color: #34495e;
-            font-size: 0.95em;
-            line-height: 1.4;
-        }
-
-        .important-box {
-            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-            text-align: center;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .interactive-demo {
-            background: #2c3e50;
+        .warning-box {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
             color: white;
             padding: 20px;
             border-radius: 10px;
-            margin-top: 20px;
             text-align: center;
-        }
-
-        .demo-button {
-            background: #e74c3c;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border-radius: 30px;
-            cursor: pointer;
-            margin: 10px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .demo-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 600px;
-            text-align: center;
-            animation: modalPop 0.3s ease;
-        }
-
-        @keyframes modalPop {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        .close-modal {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 30px;
-            border-radius: 20px;
-            margin-top: 20px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-
-        .visual-guide {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            font-weight: bold;
             margin-top: 20px;
         }
-
-        .visual-item {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .visual-item:hover {
-            background: #d5dbdb;
-            transform: rotate(3deg);
-        }
-
-        .visual-item .icon {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .quiz-section {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 30px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        .quiz-question {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        .quiz-options {
+        .icons-row {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
         }
-
-        .quiz-option {
-            background: #3498db;
-            color: white;
+        .icon-item {
+            text-align: center;
             padding: 15px;
+            background: white;
             border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            font-size: 1em;
+            margin: 5px;
         }
-
-        .quiz-option:hover {
-            background: #2980b9;
-            transform: translateX(10px);
-        }
-
-        .quiz-option.correct {
-            background: #27ae60;
-        }
-
-        .quiz-option.wrong {
-            background: #e74c3c;
-        }
-
-        @media print {
-            body { background: white; }
-            .safety-card { break-inside: avoid; }
-            .demo-button, .quiz-section { display: none; }
-        }
-
-        @media (max-width: 768px) {
-            .card-grid { grid-template-columns: 1fr; }
-            .header h1 { font-size: 1.8em; }
+        .icon-item .emoji {
+            font-size: 2.5em;
+            display: block;
+            margin-bottom: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="warning-sign">⚠️🧪🔬</div>
-            <h1>ПРАВИЛА БЕЗОПАСНОСТИ<br>в химической лаборатории</h1>
-            <p style="color: #7f8c8d; font-size: 1.1em;">Памятка для юных химиков</p>
-        </div>
-
-        <div class="card-grid">
-            <!-- General Safety Rules -->
-            <div class="safety-card card-general">
-                <div class="card-icon">📋</div>
-                <div class="card-title">ОСНОВНЫЕ ПРАВИЛА</div>
-                
-                <div class="rule-item">
+        <h1>⚠️ ПРАВИЛА БЕЗОПАСНОСТИ</h1>
+        <div class="subtitle">в химической лаборатории</div>
+        
+        <div class="section">
+            <h2>📋 ОСНОВНЫЕ ПРАВИЛА</h2>
+            <div class="rules-grid">
+                <div class="rule">
                     <div class="rule-number">1</div>
-                    <div class="rule-text">Выполняй опыты <strong>строго по инструкции</strong> и рекомендациям учителя</div>
+                    <div>Выполняй опыты строго по инструкции</div>
                 </div>
-
-                <div class="rule-item">
+                <div class="rule">
                     <div class="rule-number">2</div>
-                    <div class="rule-text">Опыты с вредными газами проводи в <strong>вытяжном шкафу</strong> 🌬️</div>
+                    <div>Опыты с газами — в вытяжном шкафу</div>
                 </div>
-
-                <div class="rule-item">
+                <div class="rule">
                     <div class="rule-number">3</div>
-                    <div class="rule-text">Наблюдай за опытом <strong>через стенки пробирки</strong>, не заглядывай внутрь! 👀</div>
+                    <div>Наблюдай через стенки пробирки</div>
                 </div>
-
-                <div class="rule-item">
+                <div class="rule">
                     <div class="rule-number">4</div>
-                    <div class="rule-text">С огнём будь <strong>особенно осторожен</strong>! 🔥</div>
+                    <div>С огнём будь осторожен! 🔥</div>
                 </div>
-
-                <div class="rule-item">
+                <div class="rule">
                     <div class="rule-number">5</div>
-                    <div class="rule-text">Нагревай пробирку <strong>равномерно</strong>. Не добавляй вещества в нагретую пробирку!</div>
+                    <div>Не бери вещества руками</div>
                 </div>
-
-                <div class="rule-item">
+                <div class="rule">
                     <div class="rule-number">6</div>
-                    <div class="rule-text">❌ <strong>ЗАПРЕЩЕНО:</strong> брать вещества руками, пробовать на вкус, рассыпать</div>
-                </div>
-
-                <div class="rule-item">
-                    <div class="rule-number">7</div>
-                    <div class="rule-text">Запах узнавай <strong>движением ладони</strong> от сосуда к носу 👃</div>
-                </div>
-
-                <div class="rule-item">
-                    <div class="rule-number">8</div>
-                    <div class="rule-text">Используй только <strong>чистую посуду</strong> 🧼</div>
-                </div>
-
-                <div class="important-box">
-                    🚨 После работы убери место и вымой руки с мылом!
+                    <div>Запах — движением ладони к носу</div>
                 </div>
             </div>
+        </div>
 
-            <!-- Hazardous Substances -->
-            <div class="safety-card card-acid">
-                <div class="card-icon">☠️</div>
-                <div class="card-title">ЕДКИЕ ВЕЩЕСТВА</div>
-
-                <div class="visual-guide">
-                    <div class="visual-item">
-                        <div class="icon">🧪</div>
-                        <div><strong>Кислоты</strong></div>
-                    </div>
-                    <div class="visual-item">
-                        <div class="icon">⚗️</div>
-                        <div><strong>Щёлочи</strong></div>
-                    </div>
-                    <div class="visual-item">
-                        <div class="icon">🔥</div>
-                        <div><strong>Горючие</strong></div>
-                    </div>
-                </div>
-
-                <div class="rule-item">
+        <div class="section" style="border-left-color: #e74c3c;">
+            <h2>☠️ КИСЛОТЫ И ЩЁЛОЧИ</h2>
+            <div class="rules-grid">
+                <div class="rule">
                     <div class="rule-number">1</div>
-                    <div class="rule-text"><strong>КИСЛОТУ В ВОДУ!</strong> <br>Наливай кислоту медленно в воду, а НЕ наоборот!</div>
+                    <div><strong>КИСЛОТУ В ВОДУ!</strong> Никогда наоборот!</div>
                 </div>
-
-                <div class="rule-item">
+                <div class="rule">
                     <div class="rule-number">2</div>
-                    <div class="rule-text">Щёлочь бери <strong>пинцетом</strong>! Растворяй малыми порциями в фарфоровой посуде</div>
+                    <div>Щёлочь бери пинцетом</div>
                 </div>
-
-                <div class="rule-item">
+                <div class="rule">
                     <div class="rule-number">3</div>
-                    <div class="rule-text">Пролитую кислоту/щёлочь засыпь <strong>сухим песком</strong> 🏖️</div>
-                </div>
-
-                <div class="important-box" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
-                    ⚠️ НИКОГДА не лей воду в кислоту!<br>
-                    Только КИСЛОТУ в воду!
-                </div>
-
-                <button class="demo-button" onclick="showModal('acidDemo')">
-                    🎬 Показать правильное разбавление
-                </button>
-            </div>
-
-            <!-- Emergency Procedures -->
-            <div class="safety-card card-emergency">
-                <div class="card-icon">🚑</div>
-                <div class="card-title">ЕСЛИ СЛУЧИЛАСЬ БЕДА</div>
-
-                <div class="rule-item">
-                    <div class="rule-number">🧴</div>
-                    <div class="rule-text"><strong>Кислота на коже:</strong><br>
-                    1. Стряхни капли<br>
-                    2. Промой холодной водой 💧<br>
-                    3. Обработай 2% раствором уксусной кислоты<br>
-                    4. Снова промой водой</div>
-                </div>
-
-                <div class="rule-item">
-                    <div class="rule-number">🧴</div>
-                    <div class="rule-text"><strong>Щёлочь на коже:</strong><br>
-                    1. Стряхни капли<br>
-                    2. Промой холодной водой 💧<br>
-                    3. Обработай 2% раствором борной кислоты<br>
-                    4. Снова промой водой</div>
-                </div>
-
-                <div class="rule-item">
-                    <div class="rule-number">📞</div>
-                    <div class="rule-text"><strong>НЕМЕДЛЕННО</strong> сообщи учителю о любом несчастном случае!</div>
-                </div>
-
-                <div class="important-box" style="background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%); animation: pulse 1s infinite;">
-                    🆘 При попадании вещества на кожу — СРАЗУ к учителю!
-                </div>
-
-                <button class="demo-button" onclick="showModal('emergencyDemo')">
-                    📱 Что делать в экстренной ситуации?
-                </button>
-            </div>
-
-            <!-- Food & Cleanliness -->
-            <div class="safety-card">
-                <div class="card-icon">🍔❌</div>
-                <div class="card-title">КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНО!</div>
-
-                <div class="visual-guide">
-                    <div class="visual-item" style="background: #ffcccc;">
-                        <div class="icon">🍕</div>
-                        <div><strong>Есть в лаборатории</strong></div>
-                    </div>
-                    <div class="visual-item" style="background: #ffcccc;">
-                        <div class="icon">👅</div>
-                        <div><strong>Пробовать на вкус</strong></div>
-                    </div>
-                    <div class="visual-item" style="background: #ffcccc;">
-                        <div class="icon">✋</div>
-                        <div><strong>Брать руками</strong></div>
-                    </div>
-                </div>
-
-                <div class="rule-item">
-                    <div class="rule-text"><strong>🚫 Не употребляй пищу и напитки в лаборатории!</strong></div>
-                </div>
-
-                <div class="rule-item">
-                    <div class="rule-text"><strong>🚫 Не поджигай вещества без разрешения!</strong></div>
-                </div>
-
-                <div class="rule-item">
-                    <div class="rule-text"><strong>🚫 Не рассыпай и не разбрызгивай реактивы!</strong></div>
-                </div>
-
-                <div class="important-box" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
-                    ⚠️ Помни: химическая лаборатория — не столовая!
+                    <div>Пролитое засыпь песком</div>
                 </div>
             </div>
         </div>
 
-        <!-- Interactive Quiz -->
-        <div class="quiz-section">
-            <h2 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">🎯 Проверь свои знания!</h2>
-            
-            <div id="quiz1">
-                <div class="quiz-question">Как правильно разбавлять кислоту?</div>
-                <div class="quiz-options">
-                    <button class="quiz-option" onclick="checkAnswer(this, false)">Воду лить в кислоту</button>
-                    <button class="quiz-option" onclick="checkAnswer(this, true)">Кислоту лить в воду при перемешивании</button>
-                    <button class="quiz-option" onclick="checkAnswer(this, false)">Не имеет значения</button>
+        <div class="section" style="border-left-color: #27ae60;">
+            <h2>🚑 ЕСЛИ СЛУЧИЛАСЬ БЕДА</h2>
+            <div class="rules-grid">
+                <div class="rule">
+                    <div class="rule-number">🧴</div>
+                    <div><strong>Кислота:</strong> Смыть водой → обработать слабым раствором соды → к учителю</div>
                 </div>
-            </div>
-
-            <div id="quiz2" style="margin-top: 20px;">
-                <div class="quiz-question">Что делать, если кислота попала на кожу?</div>
-                <div class="quiz-options">
-                    <button class="quiz-option" onclick="checkAnswer(this, false)">Ничего не делать</button>
-                    <button class="quiz-option" onclick="checkAnswer(this, false)">Протереть салфеткой</button>
-                    <button class="quiz-option" onclick="checkAnswer(this, true)">Смыть водой, обработать слабым раствором кислоты, сообщить учителю</button>
-                </div>
-            </div>
-
-            <div id="quiz3" style="margin-top: 20px;">
-                <div class="quiz-question">Как правильно знакомиться с запахом вещества?</div>
-                <div class="quiz-options">
-                    <button class="quiz-option" onclick="checkAnswer(this, false)">Понюхать прямо из горлышка</button>
-                    <button class="quiz-option" onclick="checkAnswer(this, true)">Движением ладони от сосуда к носу</button>
-                    <button class="quiz-option" onclick="checkAnswer(this, false)">Попросить понюхать друга</button>
+                <div class="rule">
+                    <div class="rule-number">🧴</div>
+                    <div><strong>Щёлочь:</strong> Смыть водой → обработать борной кислотой → к учителю</div>
                 </div>
             </div>
         </div>
 
-        <!-- Visual Safety Reminders -->
-        <div class="safety-card" style="margin-top: 30px;">
-            <div class="card-title">🎨 ВИЗУАЛЬНАЯ ПАМЯТКА</div>
-            <div class="visual-guide">
-                <div class="visual-item">
-                    <div class="icon">🥽</div>
-                    <div>Защитные очки</div>
-                </div>
-                <div class="visual-item">
-                    <div class="icon">🧤</div>
-                    <div>Перчатки</div>
-                </div>
-                <div class="visual-item">
-                    <div class="icon">🥼</div>
-                    <div>Халат</div>
-                </div>
-                <div class="visual-item">
-                    <div class="icon">🧯</div>
-                    <div>Огнетушитель</div>
-                </div>
-                <div class="visual-item">
-                    <div class="icon">🚿</div>
-                    <div>Душ безопасности</div>
-                </div>
-                <div class="visual-item">
-                    <div class="icon">📞</div>
-                    <div>Экстренный вызов</div>
-                </div>
+        <div class="icons-row">
+            <div class="icon-item">
+                <span class="emoji">🥽</span>
+                <div>Очки</div>
             </div>
+            <div class="icon-item">
+                <span class="emoji">🧤</span>
+                <div>Перчатки</div>
+            </div>
+            <div class="icon-item">
+                <span class="emoji">🥼</span>
+                <div>Халат</div>
+            </div>
+            <div class="icon-item">
+                <span class="emoji">🧯</span>
+                <div>Огнетушитель</div>
+            </div>
+            <div class="icon-item">
+                <span class="emoji">🚿</span>
+                <div>Душ</div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            🚨 ПОСЛЕ РАБОТЫ: убери место и вымой руки с мылом!<br>
+            ⚠️ НЕ ЕШЬ в лаборатории!
         </div>
     </div>
-
-    <!-- Modal -->
-    <div id="modal" class="modal" onclick="closeModal(event)">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div id="modalBody"></div>
-            <button class="close-modal" onclick="closeModal()">Закрыть</button>
-        </div>
-    </div>
-
-    <script>
-        function showModal(type) {
-            const modal = document.getElementById('modal');
-            const modalBody = document.getElementById('modalBody');
-            
-            if (type === 'acidDemo') {
-                modalBody.innerHTML = `
-                    <h2>🧪 Правильное разбавление кислоты</h2>
-                    <div style="font-size: 4em; margin: 20px;">🌊 + 🧪 = ✅</div>
-                    <p style="font-size: 1.2em;"><strong>ВОДУ налить в сосуд</strong></p>
-                    <p style="font-size: 1.2em;"><strong>↓</strong></p>
-                    <p style="font-size: 1.2em;"><strong>МЕДЛЕННО добавлять КИСЛОТУ</strong></p>
-                    <p style="font-size: 1.2em;"><strong>↓</strong></p>
-                    <p style="font-size: 1.2em;"><strong>ПЕРЕМЕШИВАТЬ</strong></p>
-                    <div style="background: #ffcccc; padding: 15px; border-radius: 10px; margin-top: 20px;">
-                        <strong>❌ НИКОГДА не лей воду в кислоту!</strong><br>
-                        Может произойти бурная реакция с разбрызгиванием!
-                    </div>
-                `;
-            } else if (type === 'emergencyDemo') {
-                modalBody.innerHTML = `
-                    <h2>🚨 Алгоритм действий при ЧП</h2>
-                    <div style="text-align: left; font-size: 1.1em;">
-                        <p><strong>1.</strong> Немедленно прекрати работу</p>
-                        <p><strong>2.</strong> Сообщи учителю/лаборанту 📢</p>
-                        <p><strong>3.</strong> Следуй инструкциям учителя</p>
-                        <p><strong>4.</strong> При попадании на кожу — промой водой 10-15 минут</p>
-                        <p><strong>5.</strong> Не паникуй! 😌</p>
-                    </div>
-                    <div style="background: #27ae60; color: white; padding: 15px; border-radius: 10px; margin-top: 20px;">
-                        <strong>Помни:</strong> Быстрое реагирование предотвращает серьёзные последствия!
-                    </div>
-                `;
-            }
-            
-            modal.style.display = 'flex';
-        }
-
-        function closeModal(event) {
-            if (!event || event.target.id === 'modal') {
-                document.getElementById('modal').style.display = 'none';
-            }
-        }
-
-        function checkAnswer(button, isCorrect) {
-            const parent = button.parentElement;
-            const buttons = parent.getElementsByClassName('quiz-option');
-            
-            for (let btn of buttons) {
-                btn.disabled = true;
-                btn.style.cursor = 'not-allowed';
-            }
-            
-            if (isCorrect) {
-                button.classList.add('correct');
-                button.innerHTML += ' ✅ ПРАВИЛЬНО! Молодец!';
-            } else {
-                button.classList.add('wrong');
-                button.innerHTML += ' ❌ Неправильно. Попробуй ещё раз!';
-                
-                // Show correct answer
-                for (let btn of buttons) {
-                    if (btn.onclick.toString().includes('true')) {
-                        btn.classList.add('correct');
-                        btn.innerHTML += ' ✅ Правильный ответ';
-                    }
-                }
-            }
-        }
-
-        // Add click animation to cards
-        document.querySelectorAll('.safety-card').forEach(card => {
-            card.addEventListener('click', function() {
-                this.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 100);
-            });
-        });
-
-        // Confetti effect for correct answers
-        function createConfetti(x, y) {
-            const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4caf50', '#8bc34a', '#cddc39', '#ffeb3b', '#ffc107', '#ff9800', '#ff5722'];
-            
-            for (let i = 0; i < 30; i++) {
-                const confetti = document.createElement('div');
-                confetti.style.position = 'fixed';
-                confetti.style.left = x + 'px';
-                confetti.style.top = y + 'px';
-                confetti.style.width = '10px';
-                confetti.style.height = '10px';
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.borderRadius = '50%';
-                confetti.style.pointerEvents = 'none';
-                confetti.style.zIndex = '9999';
-                document.body.appendChild(confetti);
-                
-                const angle = (Math.PI * 2 * i) / 30;
-                const velocity = 5 + Math.random() * 5;
-                const vx = Math.cos(angle) * velocity;
-                const vy = Math.sin(angle) * velocity;
-                
-                let posX = x;
-                let posY = y;
-                let opacity = 1;
-                
-                const animate = () => {
-                    posX += vx;
-                    posY += vy + 2;
-                    opacity -= 0.02;
-                    
-                    confetti.style.left = posX + 'px';
-                    confetti.style.top = posY + 'px';
-                    confetti.style.opacity = opacity;
-                    
-                    if (opacity > 0) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        confetti.remove();
-                    }
-                };
-                
-                requestAnimationFrame(animate);
-            }
-        }
-
-        // Add confetti to correct answers
-        const originalCheckAnswer = checkAnswer;
-        checkAnswer = function(button, isCorrect) {
-            if (isCorrect) {
-                const rect = button.getBoundingClientRect();
-                createConfetti(rect.left + rect.width/2, rect.top + rect.height/2);
-            }
-            originalCheckAnswer(button, isCorrect);
-        }
-    </script>
 </body>
 </html>
