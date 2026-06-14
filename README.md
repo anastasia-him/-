@@ -1,2 +1,198 @@
 # -
 Правила безопасности на уроках химии
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔬 Правила безопасности - Инфографика</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+        }
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .rule {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .rule-number {
+            background: #e74c3c;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .icons-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .icon-item {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .icon-item .emoji {
+            font-size: 2.5em;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️ ПРАВИЛА БЕЗОПАСНОСТИ</h1>
+        <div class="subtitle">в химической лаборатории</div>
+        
+        <div class="section">
+            <h2>📋 ОСНОВНЫЕ ПРАВИЛА</h2>
+            <div class="rules-grid">
+                <div class="rule">
+                    <div class="rule-number">1</div>
+                    <div>Выполняй опыты строго по инструкции</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-number">2</div>
+                    <div>Опыты с газами — в вытяжном шкафу</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-number">3</div>
+                    <div>Наблюдай через стенки пробирки</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-number">4</div>
+                    <div>С огнём будь осторожен! 🔥</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-number">5</div>
+                    <div>Не бери вещества руками</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-number">6</div>
+                    <div>Запах — движением ладони к носу</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="border-left-color: #e74c3c;">
+            <h2>☠️ КИСЛОТЫ И ЩЁЛОЧИ</h2>
+            <div class="rules-grid">
+                <div class="rule">
+                    <div class="rule-number">1</div>
+                    <div><strong>КИСЛОТУ В ВОДУ!</strong> Никогда наоборот!</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-number">2</div>
+                    <div>Щёлочь бери пинцетом</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-number">3</div>
+                    <div>Пролитое засыпь песком</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="border-left-color: #27ae60;">
+            <h2>🚑 ЕСЛИ СЛУЧИЛАСЬ БЕДА</h2>
+            <div class="rules-grid">
+                <div class="rule">
+                    <div class="rule-number">🧴</div>
+                    <div><strong>Кислота:</strong> Смыть водой → обработать слабым раствором соды → к учителю</div>
+                </div>
+                <div class="rule">
+                    <div class="rule-number">🧴</div>
+                    <div><strong>Щёлочь:</strong> Смыть водой → обработать борной кислотой → к учителю</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="icons-row">
+            <div class="icon-item">
+                <span class="emoji">🥽</span>
+                <div>Очки</div>
+            </div>
+            <div class="icon-item">
+                <span class="emoji">🧤</span>
+                <div>Перчатки</div>
+            </div>
+            <div class="icon-item">
+                <span class="emoji">🥼</span>
+                <div>Халат</div>
+            </div>
+            <div class="icon-item">
+                <span class="emoji">🧯</span>
+                <div>Огнетушитель</div>
+            </div>
+            <div class="icon-item">
+                <span class="emoji">🚿</span>
+                <div>Душ</div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            🚨 ПОСЛЕ РАБОТЫ: убери место и вымой руки с мылом!<br>
+            ⚠️ НЕ ЕШЬ в лаборатории!
+        </div>
+    </div>
+</body>
+</html>
